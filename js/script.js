@@ -185,3 +185,54 @@ function escapeHtml(text) {
 
 window.addEpisode = addEpisode;
 window.removeSeries = removeSeries;
+
+const homeSeries = document.getElementById('homeSeries');
+
+if (homeSeries) {
+  renderHomeSeries();
+}
+
+function renderHomeSeries() {
+  let data = JSON.parse(localStorage.getItem('seriesData')) || [];
+
+  if (data.length === 0) {
+    homeSeries.innerHTML = `
+      <div class="empty-state">
+        <p>Пока нет сериалов. Добавьте их в каталоге.</p>
+      </div>
+    `;
+    return;
+  }
+
+  // берём последние 3 сериала
+  data = data.slice(-3).reverse();
+
+  homeSeries.innerHTML = '';
+
+  data.forEach((item) => {
+    const percent = Math.round((item.watched / item.episodes) * 100);
+    const imageSrc = item.image && item.image.length > 0
+      ? item.image
+      : 'Image/image.png';
+
+    const isCompleted = item.watched >= item.episodes;
+
+    const card = document.createElement('article');
+    card.className = isCompleted
+      ? 'product-card product-card--completed'
+      : 'product-card';
+
+    card.innerHTML = `
+      <div class="product-card__image">
+        <img src="${imageSrc}" alt="${item.title}">
+      </div>
+
+      <div class="product-card__body">
+        <h3 class="product-card__title">${item.title}</h3>
+        <p class="product-card__progress">Прогресс: ${percent}%</p>
+      </div>
+    `;
+
+    homeSeries.appendChild(card);
+  });
+}
