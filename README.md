@@ -96,8 +96,12 @@
 ├── about.html
 ├── contact.html
 │
-├── js/
-│   └── script.js
+js/
+│   ├── main.js
+│   ├── catalog.js
+│   ├── storage.js
+│   └── ui.js
+│
 │
 ├── style/
 │   ├── reset.css
