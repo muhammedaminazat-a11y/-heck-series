@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Hexlet Series – Коллекция сериалов</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hexlet Series — сайт для отслеживания просмотренных сезонов и серий.">
+  <link rel="icon" href="Image/logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="Image/logo.svg">
+  <link rel="stylesheet" href="style/reset.css">
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body id="top">
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <img src="Image/logo.svg" alt="Логотип Hexlet Series" width="32" height="32">
+        <span>HEXLET SERIES</span>
+      </a>
+
+      <button class="burger" id="burger" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav" id="nav">
+        <a href="index.html" class="nav__link nav__link--active">Главная</a>
+        <a href="catalog.html" class="nav__link">Каталог</a>
+        <a href="about.html" class="nav__link">О проекте</a>
+        <a href="contact.html" class="nav__link">Контакты</a>
+        <button class="header__cta header__cta--mobile" type="button">Профиль</button>
+      </nav>
+
+      <button class="header__cta header__cta--desktop" type="button">Профиль</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__inner">
+        <div>
+          <div class="hero__badge">
+            <span class="hero__badge-dot"></span>
+            Отмечай просмотренные серии
+          </div>
+
+          <h1 class="hero__title">Моя коллекция сериалов</h1>
+
+          <p class="hero__subtitle">
+            Hexlet Series помогает добавлять сериалы, отслеживать просмотренные серии,
+            сохранять прогресс и удобно пользоваться сайтом как на компьютере, так и на телефоне.
+          </p>
+
+          <div class="hero__cta-row">
+            <a href="catalog.html" class="btn-primary">Перейти в каталог</a>
+          </div>
+
+          <div class="hero__stats">
+            <div class="hero__stat">
+              <span class="hero__stat-number">JS</span>
+              <span>динамические карточки</span>
+            </div>
+            <div class="hero__stat">
+              <span class="hero__stat-number">100%</span>
+              <span>адаптация под телефон</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <article class="hero__card">
+            <div class="hero__image">
+              <img src="Image/image.png" alt="Главное изображение сайта Hexlet Series">
+            </div>
+            <div class="hero__label">
+              <span class="hero__label-dot"></span>
+              Следи за любимыми сериалами
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <header class="section__header">
+          <div>
+            <h2 class="section__title">Возможности сайта</h2>
+            <p class="section__subtitle">
+              Основной функционал веб-приложения
+            </p>
+          </div>
+        </header>
+
+        <div class="benefits">
+          <article class="benefit-card">
+            <h3 class="benefit-card__title">Добавление сериалов</h3>
+            <p>Пользователь может самостоятельно добавлять сериалы в каталог.</p>
+          </article>
+
+          <article class="benefit-card">
+            <h3 class="benefit-card__title">Отслеживание прогресса</h3>
+            <p>Можно отмечать просмотренные серии и видеть текущий прогресс.</p>
+          </article>
+
+          <article class="benefit-card">
+            <h3 class="benefit-card__title">Сохранение данных</h3>
+            <p>Информация сохраняется в localStorage и не исчезает после перезагрузки.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <header class="section__header">
+          <div>
+            <h2 class="section__title">Категории</h2>
+            <p class="section__subtitle">Примеры направлений для просмотра</p>
+          </div>
+        </header>
+
+        <div class="categories">
+          <article class="category-card">
+            <h3 class="category-card__title">Драма</h3>
+            <p class="category-card__text">Сильные сюжеты и глубокие персонажи.</p>
+          </article>
+
+          <article class="category-card">
+            <h3 class="category-card__title">Комедия</h3>
+            <p class="category-card__text">Лёгкие сериалы для отдыха.</p>
+          </article>
+
+          <article class="category-card">
+            <h3 class="category-card__title">Фантастика</h3>
+            <p class="category-card__text">Миры будущего, магия и приключения.</p>
+          </article>
+
+          <article class="category-card">
+            <h3 class="category-card__title">Избранное</h3>
+            <p class="category-card__text">Любимые сериалы, сохранённые пользователем.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>© 2026 Hexlet Series. Все права защищены.</div>
+      <div class="footer__links">
+        <a href="about.html">О проекте</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="contact.html">Контакты</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" id="authModal">
+    <div class="modal__content">
+      <span class="modal__close" id="closeModal">&times;</span>
+      <h2>Вход / Регистрация</h2>
+
+      <form class="modal__form">
+        <input type="text" placeholder="Имя" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Пароль" required>
+        <button class="btn-primary" type="submit">Войти</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
