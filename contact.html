@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Series Tracker – Контакты</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta
+    name="description"
+    content="Контакты проекта Series Tracker."
+  >
+  <link rel="stylesheet" href="style/reset.css">
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <img src="Image/logo.svg" alt="Логотип Series Tracker" width="32" height="32">
+        <span>Hexlet Series</span>
+      </a>
+
+      <button class="burger" id="burger" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav" id="nav">
+        <a href="index.html" class="nav__link">Главная</a>
+        <a href="catalog.html" class="nav__link">Каталог</a>
+        <a href="about.html" class="nav__link">О проекте</a>
+        <a href="contact.html" class="nav__link nav__link--active">Контакты</a>
+        <button class="header__cta header__cta--mobile">Профиль</button>
+      </nav>
+
+      <button class="header__cta header__cta--desktop">Профиль</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1 class="page-title">Связаться с нами</h1>
+        <p class="page-subtitle">
+          Есть вопросы по сайту «Коллекция сериалов»? Напишите нам через форму обратной связи.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="contact-info">
+        <div class="container contacts-layout">
+          <form class="contact-form" action="#" method="post">
+            <div class="contact-form__group">
+              <label for="name">Имя</label>
+              <input id="name" type="text" name="name" required placeholder="Ваше имя">
+            </div>
+
+            <div class="contact-form__group">
+              <label for="email">Email или телефон</label>
+              <input
+                id="email"
+                type="text"
+                name="email"
+                required
+                placeholder="example@mail.com"
+              >
+            </div>
+
+            <div class="contact-form__group">
+              <label for="message">Сообщение</label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                placeholder="Напишите ваш вопрос или предложение"
+              ></textarea>
+              <p class="contact-form__hint">
+                Отправляя форму, вы соглашаетесь с обработкой персональных данных.
+              </p>
+            </div>
+
+            <button class="btn-primary" type="submit">Отправить</button>
+          </form>
+        </div>
+
+        <div class="contacts-info">
+          <p><strong>Телефон:</strong> +7 (777) 123-45-67</p>
+          <p><strong>Email:</strong> support@seriestracker.kz</p>
+          <p><strong>Адрес:</strong> г. Алматы, ул. Абая, 120</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>© 2025 Series Tracker. Все права защищены.</div>
+      <div class="footer__links">
+        <a href="about.html">О проекте</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="contact.html">Контакты</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const burger = document.getElementById('burger');
+    const nav = document.getElementById('nav');
+
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('burger--active');
+      nav.classList.toggle('nav--open');
+      document.body.classList.toggle('no-scroll');
+    });
+
+    nav.addEventListener('click', (event) => {
+      if (event.target.closest('a') || event.target.closest('button')) {
+        burger.classList.remove('burger--active');
+        nav.classList.remove('nav--open');
+        document.body.classList.remove('no-scroll');
+      }
+    });
+  </script>
+</body>
+</html>

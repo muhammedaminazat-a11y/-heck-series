@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Series Tracker – О проекте</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta
+    name="description"
+    content="О проекте Series Tracker — веб-приложении для отслеживания сериалов."
+  >
+  <link rel="stylesheet" href="style/reset.css">
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body id="top">
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <img src="Image/logo.svg" alt="Логотип Series Tracker" width="32" height="32">
+        <span>Hexlet Series</span>
+      </a>
+
+      <button class="burger" id="burger" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav" id="nav">
+        <a href="index.html" class="nav__link">Главная</a>
+        <a href="catalog.html" class="nav__link">Каталог</a>
+        <a href="about.html" class="nav__link nav__link--active">О проекте</a>
+        <a href="contact.html" class="nav__link">Контакты</a>
+        <button class="header__cta header__cta--mobile">Профиль</button>
+      </nav>
+
+      <button class="header__cta header__cta--desktop">Профиль</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="about-section">
+      <div class="container">
+
+        <h2 class="about-title">О проекте Series Tracker</h2>
+        <p class="about-lead">
+          Series Tracker — это веб-приложение для ведения коллекции сериалов и отслеживания просмотренных сезонов и серий.
+          Пользователь может просматривать каталог сериалов, отмечать просмотренные эпизоды и хранить информацию о текущем прогрессе.
+        </p>
+
+        <div class="about-features">
+          <div class="about-feature">
+            <h3>📺 Каталог сериалов</h3>
+            <p>На сайте представлена коллекция популярных сериалов разных жанров.</p>
+          </div>
+          <div class="about-feature">
+            <h3>✅ Отслеживание прогресса</h3>
+            <p>Пользователь может отмечать просмотренные серии и сезоны.</p>
+          </div>
+          <div class="about-feature">
+            <h3>🔎 Удобный поиск</h3>
+            <p>Можно быстро находить сериалы по названию и фильтровать их по жанру.</p>
+          </div>
+          <div class="about-feature">
+            <h3>📱 Адаптивный интерфейс</h3>
+            <p>Сайт корректно отображается на компьютере, планшете и телефоне.</p>
+          </div>
+        </div>
+
+        <div class="about-history">
+          <h3>История создания проекта</h3>
+          <p>
+            Данный сайт был разработан в рамках учебной практики по дисциплине
+            «Разработка веб-приложения на JavaScript».
+            Основная цель проекта — создать удобное веб-приложение для работы с коллекцией сериалов.
+          </p>
+          <ul>
+            <li><strong>Этап 1:</strong> разработка структуры страниц сайта</li>
+            <li><strong>Этап 2:</strong> создание адаптивного интерфейса на HTML и CSS</li>
+            <li><strong>Этап 3:</strong> добавление JavaScript для взаимодействия с пользователем</li>
+            <li><strong>Этап 4:</strong> реализация отслеживания просмотренных серий и сезонов</li>
+          </ul>
+        </div>
+
+        <div class="about-mission">
+          <h3>Цель проекта</h3>
+          <p>
+            Цель проекта — создать простой и удобный сайт, который поможет пользователю вести список любимых сериалов,
+            отмечать просмотренные серии и не терять прогресс просмотра.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="page-header">
+      <div class="container">
+        <h2 class="about-title">Немного о сайте</h2>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container about-grid">
+        <div class="about__text">
+          <p>
+            Series Tracker — это учебный веб-проект, разработанный с использованием HTML5, CSS3 и JavaScript.
+            Сайт включает главную страницу, каталог сериалов, страницу с информацией о проекте и страницу контактов.
+          </p>
+          <p>
+            JavaScript используется для интерактивности: фильтрации карточек, работы меню и отметки просмотренных серий.
+          </p>
+        </div>
+        <aside class="about__panel">
+          <h2 class="benefit-card__title">Кратко о проекте</h2>
+          <p>• Семантическая HTML-разметка</p>
+          <p>• Адаптивная верстка</p>
+          <p>• Каталог сериалов с карточками</p>
+          <p>• JavaScript для интерактивных элементов</p>
+          <p>• Форма обратной связи</p>
+        </aside>
+      </div>
+
+      <a href="#top" class="back-to-top" aria-label="Вернуться наверх">↑</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>© 2025 Series Tracker. Все права защищены.</div>
+      <div class="footer__links">
+        <a href="about.html">О проекте</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="contact.html">Контакты</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const burger = document.getElementById('burger');
+    const nav = document.getElementById('nav');
+
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('burger--active');
+      nav.classList.toggle('nav--open');
+      document.body.classList.toggle('no-scroll');
+    });
+
+    nav.addEventListener('click', (event) => {
+      if (event.target.closest('a') || event.target.closest('button')) {
+        burger.classList.remove('burger--active');
+        nav.classList.remove('nav--open');
+        document.body.classList.remove('no-scroll');
+      }
+    });
+  </script>
+</body>
+</html>
