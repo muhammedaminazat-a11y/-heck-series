@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Hexlet Series – Коллекция сериалов</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Hexlet Series — веб-приложение для отслеживания просмотренных сезонов и серий любимых сериалов."
+  >
+  <link rel="stylesheet" href="style/reset.css">
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body id="top">
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <img src="Image/logo.svg" alt="Логотип Hexlet Series" width="32" height="32">
+        <span>Hexlet Series</span>
+      </a>
+
+      <button class="burger" id="burger" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav" id="nav">
+        <a href="index.html" class="nav__link nav__link--active">Главная</a>
+        <a href="catalog.html" class="nav__link">Каталог</a>
+        <a href="about.html" class="nav__link">О проекте</a>
+        <a href="contact.html" class="nav__link">Контакты</a>
+        <button class="header__cta header__cta--mobile">Профиль</button>
+      </nav>
+
+      <button class="header__cta header__cta--desktop">Профиль</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__inner">
+        <div>
+          <div class="hero__badge">
+            <span class="hero__badge-dot"></span>
+            Новые сериалы и сезоны
+          </div>
+
+          <h1 class="hero__title">Моя коллекция сериалов</h1>
+
+          <p class="hero__subtitle">
+            Hexlet Series помогает отслеживать просмотренные сезоны и серии,
+            хранить любимые сериалы и быстро находить нужный эпизод.
+          </p>
+
+          <div class="hero__cta-row">
+            <a href="catalog.html" class="btn-primary">Перейти в каталог</a>
+          </div>
+
+          <div class="hero__stats">
+            <div class="hero__stat">
+              <span class="hero__stat-number">Удобно</span>
+              <span>простое отслеживание серий</span>
+            </div>
+            <div class="hero__stat">
+              <span class="hero__stat-number">Быстро</span>
+              <span>адаптация под телефон</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <article class="hero__card">
+            <div class="hero__image">
+              <img src="Image/image.png" alt="Обложка сайта Hexlet Series">
+            </div>
+            <div class="hero__label">
+              <span class="hero__label-dot"></span>
+              Отмечай просмотренные серии
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <header class="section__header">
+          <div>
+            <h2 class="section__title">Категории</h2>
+            <p class="section__subtitle">
+              Выбирай сериалы по жанру и переходи в каталог для добавления.
+            </p>
+          </div>
+        </header>
+
+        <div class="categories">
+          <article class="category-card">
+            <h3 class="category-card__title">Драма</h3>
+            <p class="category-card__text">Сильные сюжеты и глубокие персонажи.</p>
+          </article>
+
+          <article class="category-card">
+            <h3 class="category-card__title">Комедия</h3>
+            <p class="category-card__text">Лёгкие и смешные сериалы на каждый день.</p>
+          </article>
+
+          <article class="category-card">
+            <h3 class="category-card__title">Фантастика</h3>
+            <p class="category-card__text">Будущее, магия и приключения.</p>
+          </article>
+
+          <article class="category-card">
+            <h3 class="category-card__title">Избранное</h3>
+            <p class="category-card__text">Сериалы, которые можно сохранить отдельно.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <header class="section__header">
+          <div>
+            <h2 class="section__title">Мои сериалы</h2>
+            <p class="section__subtitle">
+              Сейчас список пуст. Добавь свои сериалы в каталоге.
+            </p>
+          </div>
+        </header>
+
+        <div class="empty-state">
+          <h3>Пока нет добавленных сериалов</h3>
+          <p>
+            Перейди в каталог и добавь 2–3 сериала для демонстрации работы сайта.
+          </p>
+          <a href="catalog.html" class="btn-primary">Открыть каталог</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <header class="section__header">
+          <div>
+            <h2 class="section__title">Почему Hexlet Series?</h2>
+            <p class="section__subtitle">Кратко о возможностях сайта.</p>
+          </div>
+        </header>
+
+        <div class="benefits">
+          <article class="benefit-card">
+            <h3 class="benefit-card__title">Удобный интерфейс</h3>
+            <p>Сайт позволяет быстро ориентироваться и находить нужный сериал.</p>
+          </article>
+
+          <article class="benefit-card">
+            <h3 class="benefit-card__title">Отслеживание просмотра</h3>
+            <p>Можно отмечать просмотренные серии и следить за прогрессом.</p>
+          </article>
+
+          <article class="benefit-card">
+            <h3 class="benefit-card__title">Адаптивность</h3>
+            <p>Сайт корректно работает на компьютере, планшете и телефоне.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>© 2026 Hexlet Series. Все права защищены.</div>
+      <div class="footer__links">
+        <a href="about.html">О проекте</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="contact.html">Контакты</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" id="authModal">
+    <div class="modal__content">
+      <span class="modal__close" id="closeModal">&times;</span>
+      <h2>Вход / Регистрация</h2>
+
+      <form class="modal__form">
+        <input type="text" placeholder="Имя" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Пароль" required>
+        <button class="btn-primary" type="submit">Войти</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
